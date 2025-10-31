@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,7 @@ export default function Navigation() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/70 backdrop-blur-xl shadow-lg border-b border-white/20"
+          ? "bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -66,7 +67,7 @@ export default function Navigation() {
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative px-5 py-2 text-gray-700 font-semibold hover:text-blue-600 transition-colors group"
+                className="relative px-5 py-2 text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
                 {link.label}
                 <motion.span
@@ -78,6 +79,9 @@ export default function Navigation() {
               </motion.a>
             ))}
 
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
             {/* CTA Button */}
             <motion.a
               href="#contact"
@@ -86,7 +90,7 @@ export default function Navigation() {
               transition={{ duration: 0.3, delay: 0.3 }}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="ml-4 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+              className="ml-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
             >
               Hire Me
             </motion.a>
@@ -96,21 +100,21 @@ export default function Navigation() {
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             whileTap={{ scale: 0.9 }}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-white/80 backdrop-blur-lg shadow-lg"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-lg"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-5 flex flex-col justify-between">
               <motion.span
                 animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-                className="w-full h-0.5 bg-gray-700 rounded-full"
+                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
               />
               <motion.span
                 animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="w-full h-0.5 bg-gray-700 rounded-full"
+                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
               />
               <motion.span
                 animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-                className="w-full h-0.5 bg-gray-700 rounded-full"
+                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
               />
             </div>
           </motion.button>
@@ -130,7 +134,7 @@ export default function Navigation() {
                 initial={{ y: -20 }}
                 animate={{ y: 0 }}
                 exit={{ y: -20 }}
-                className="mt-6 pb-6 flex flex-col gap-4 bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-xl"
+                className="mt-6 pb-6 flex flex-col gap-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl p-6 shadow-xl"
               >
                 {navLinks.map((link, index) => (
                   <motion.a
@@ -141,7 +145,7 @@ export default function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="text-gray-700 font-semibold hover:text-blue-600 transition-colors text-lg"
+                    className="text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-lg"
                   >
                     {link.label}
                   </motion.a>
