@@ -102,6 +102,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' width='120' height='120'><defs><linearGradient id='gA' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%237C3AED'/><stop offset='1' stop-color='%23FF5CA0'/></linearGradient><linearGradient id='gE' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%2306B6D4'/><stop offset='1' stop-color='%2360A5FA'/></linearGradient><filter id='shadow' x='-40%25' y='-40%25' width='180%25' height='180%25'><feDropShadow dx='0' dy='2' stdDeviation='3' flood-color='%23000' flood-opacity='0.12'/></filter></defs><text x='42' y='74' font-family='Inter,Roboto,Helvetica,Arial,sans-serif' font-weight='800' font-size='74' text-anchor='middle' dominant-baseline='middle' fill='url(%23gA)' filter='url(%23shadow)' style='letter-spacing:-4px'>A</text><g transform='translate(68,72) rotate(-8)'><text x='0' y='0' font-family='Inter,Roboto,Helvetica,Arial,sans-serif' font-weight='800' font-size='78' text-anchor='middle' dominant-baseline='middle' fill='url(%23gE)' style='mix-blend-mode:multiply;opacity:0.95;letter-spacing:-6px'>E</text></g></svg>" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
