@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://my-portfolio-anas.vercel.app",
+    url: "https://my-portfolio-anaselkhodary69-9512s-projects.vercel.app",
     title: "Anas Elkhodary - Full Stack Developer & AI Engineer",
     description: "Professional portfolio showcasing Full Stack Development, AI/ML Engineering, and innovative SaaS solutions. Explore my projects in web development, mobile apps, and AI automation.",
     siteName: "Anas Elkhodary Portfolio",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     creator: "@AnasElkhodary",
   },
   alternates: {
-    canonical: "https://my-portfolio-anas.vercel.app",
+    canonical: "https://my-portfolio-anaselkhodary69-9512s-projects.vercel.app",
   },
   category: "technology",
 };
@@ -72,7 +72,7 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Anas Elkhodary",
     "jobTitle": "Full Stack Developer & AI Engineer",
-    "url": "https://my-portfolio-anas.vercel.app",
+    "url": "https://my-portfolio-anaselkhodary69-9512s-projects.vercel.app",
     "sameAs": [
       "https://github.com/AnasElkhodary-69",
       "https://www.linkedin.com/in/anas-elkhodary-428765172/",

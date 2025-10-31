@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://my-portfolio-anas.vercel.app/sitemap.xml',
+    sitemap: 'https://my-portfolio-anaselkhodary69-9512s-projects.vercel.app/sitemap.xml',
   }
 }
