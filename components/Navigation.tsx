@@ -105,21 +105,22 @@ export default function Navigation() {
               className="relative w-10 h-10 flex items-center justify-center rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-lg"
               aria-label="Toggle menu"
             >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <motion.span
-                animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
-              />
-              <motion.span
-                animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
-              />
-              <motion.span
-                animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
-              />
-            </div>
-          </motion.button>
+              <div className="w-6 h-5 flex flex-col justify-between">
+                <motion.span
+                  animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+                  className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
+                />
+                <motion.span
+                  animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                  className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
+                />
+                <motion.span
+                  animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+                  className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
+                />
+              </div>
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Menu */}

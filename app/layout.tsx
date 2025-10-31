@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Navigation from "@/components/Navigation";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Anas Elkhodary - Full Stack Developer & AI Engineer | Portfolio",
@@ -120,7 +122,9 @@ export default function RootLayout({
       <body className="antialiased">
         <GoogleAnalytics />
         <ThemeProvider>
+          <Navigation />
           {children}
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>
