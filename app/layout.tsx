@@ -78,7 +78,7 @@ export default function RootLayout({
     "url": "https://anaselkhodary.vercel.app",
     "sameAs": [
       "https://github.com/AnasElkhodary-69",
-      "https://www.linkedin.com/in/anas-elkhodary-428765172/",
+      "https://www.linkedin.com/in/anas-elkhodary",
       "https://www.facebook.com/anas.radwan.930838/"
     ],
     "email": "anaselkhodary69@gmail.com",

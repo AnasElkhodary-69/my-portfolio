@@ -226,7 +226,7 @@ Portfolio/
 
 - **Email**: anaselkhodary69@gmail.com
 - **GitHub**: [@AnasElkhodary-69](https://github.com/AnasElkhodary-69)
-- **LinkedIn**: [Anas Elkhodary](https://www.linkedin.com/in/anas-elkhodary-428765172/)
+- **LinkedIn**: [Anas Elkhodary](https://www.linkedin.com/in/anas-elkhodary)
 - **Facebook**: [Anas Radwan](https://www.facebook.com/anas.radwan.930838/)
 - **Website**: [https://anaselkhodary.vercel.app](https://anaselkhodary.vercel.app)
 
