@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -52,9 +52,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block mb-6 px-6 py-3 bg-white/80 backdrop-blur-lg rounded-full shadow-lg border border-white/20"
+          className="inline-block mb-6 px-6 py-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-full shadow-lg border border-white/20 dark:border-gray-700/50"
         >
-          <span className="text-blue-600 font-medium text-sm flex items-center gap-2">
+          <span className="text-blue-600 dark:text-blue-400 font-medium text-sm flex items-center gap-2">
             <motion.span
               animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 1 }}
@@ -70,7 +70,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-6xl md:text-8xl font-extrabold text-gray-900 mb-4 leading-tight"
+          className="text-6xl md:text-8xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight"
         >
           Hi, I'm{" "}
           <span className="relative inline-block">
@@ -90,7 +90,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-3xl md:text-5xl font-bold text-gray-700 mb-6"
+          className="text-3xl md:text-5xl font-bold text-gray-700 dark:text-gray-200 mb-6"
         >
           Full Stack Developer
         </motion.h2>
@@ -99,11 +99,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
         >
           I build production-ready web applications, SaaS platforms, and AI-powered automation systems.
           <br />
-          <span className="font-semibold text-gray-700">Specialized in creating scalable solutions that solve real business problems.</span>
+          <span className="font-semibold text-gray-700 dark:text-gray-200">Specialized in creating scalable solutions that solve real business problems.</span>
         </motion.p>
 
         <motion.div
@@ -127,7 +127,7 @@ export default function Hero() {
             href="#contact"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 bg-white/80 backdrop-blur-lg text-gray-900 border-2 border-gray-200 rounded-2xl font-bold text-lg hover:border-blue-600 hover:bg-white transition-all shadow-xl hover:shadow-2xl"
+            className="px-10 py-5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg text-gray-900 dark:text-white border-2 border-gray-200 dark:border-gray-600 rounded-2xl font-bold text-lg hover:border-blue-600 dark:hover:border-blue-400 hover:bg-white dark:hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl"
           >
             Get In Touch
           </motion.a>
@@ -155,12 +155,12 @@ export default function Hero() {
               className="relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all opacity-0 group-hover:opacity-100" />
-              <div className="relative bg-white/80 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all">
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-white/20 dark:border-gray-700/50 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all">
                 <div className="text-4xl mb-2">{stat.icon}</div>
                 <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">{stat.label}</div>
               </div>
             </motion.div>
           ))}
@@ -173,7 +173,7 @@ export default function Hero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </motion.div>

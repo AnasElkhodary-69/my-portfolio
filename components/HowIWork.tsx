@@ -40,7 +40,7 @@ export default function HowIWork() {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-b from-white via-indigo-50/30 to-white relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-b from-white via-indigo-50/30 to-white dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-br from-indigo-100/40 to-purple-100/40 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gradient-to-br from-blue-100/40 to-cyan-100/40 rounded-full blur-3xl -z-10" />
@@ -60,16 +60,16 @@ export default function HowIWork() {
             transition={{ duration: 0.5 }}
             className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full mb-6"
           >
-            <span className="text-indigo-600 font-semibold text-sm">⚡ MY PROCESS</span>
+            <span className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm">⚡ MY PROCESS</span>
           </motion.div>
 
-          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
             How I{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
               Work
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A streamlined process that delivers results from concept to deployment
           </p>
         </motion.div>
@@ -102,7 +102,7 @@ export default function HowIWork() {
               <motion.div
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="relative bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 h-full"
+                className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 dark:border-gray-700/50 h-full"
               >
                 {/* Animated number badge */}
                 <motion.div
@@ -127,11 +127,11 @@ export default function HowIWork() {
                   {step.icon}
                 </motion.div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-br group-hover:${step.gradient} transition-all">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-br group-hover:${step.gradient} transition-all">
                   {step.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {step.description}
                 </p>
 

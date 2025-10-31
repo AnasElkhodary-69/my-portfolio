@@ -98,7 +98,7 @@ export default function Projects() {
     : projects.filter(p => p.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-32 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+    <section id="projects" className="py-32 bg-gradient-to-b from-white via-blue-50/30 to-white dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-100/40 to-indigo-100/40 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-100/40 to-pink-100/40 rounded-full blur-3xl -z-10" />
@@ -118,16 +118,16 @@ export default function Projects() {
             transition={{ duration: 0.5 }}
             className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full mb-6"
           >
-            <span className="text-blue-600 font-semibold text-sm">💼 MY WORK</span>
+            <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm">💼 MY WORK</span>
           </motion.div>
 
-          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
             Featured{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A showcase of my recent work in web development, AI automation, and mobile applications
           </p>
         </motion.div>
@@ -153,7 +153,7 @@ export default function Projects() {
               className={`relative px-8 py-3 rounded-full font-semibold transition-all ${
                 selectedCategory === category
                   ? "text-white"
-                  : "text-gray-700 bg-white hover:bg-gray-50 shadow-md"
+                  : "text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-md"
               }`}
             >
               {selectedCategory === category && (
@@ -185,7 +185,7 @@ export default function Projects() {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col"
+                className="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col"
               >
                 {/* Project Image with overlay */}
                 {project.image && (
@@ -221,12 +221,12 @@ export default function Projects() {
 
                 <div className="p-8 flex-1 flex flex-col">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
                   </div>
 
-                  <p className="text-gray-600 mb-6 line-clamp-2 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 line-clamp-2 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -239,13 +239,13 @@ export default function Projects() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.4 + idx * 0.05 }}
-                        className="px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 text-xs font-semibold rounded-lg border border-blue-100"
+                        className="px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-700 dark:text-blue-300 text-xs font-semibold rounded-lg border border-blue-100 dark:border-blue-800"
                       >
                         {tech}
                       </motion.span>
                     ))}
                     {project.tech.length > 3 && (
-                      <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-lg">
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-semibold rounded-lg">
                         +{project.tech.length - 3}
                       </span>
                     )}
@@ -264,7 +264,7 @@ export default function Projects() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-3 border-2 border-blue-600 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-50 transition-all hover:scale-105 active:scale-95 flex items-center gap-1"
+                        className="px-4 py-3 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-xl text-sm font-bold hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-1"
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
