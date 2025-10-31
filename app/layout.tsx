@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Anas Elkhodary - Full Stack Developer & AI Engineer | Portfolio",
@@ -112,6 +113,7 @@ export default function RootLayout({
       <body className="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <GoogleAnalytics />
         <ThemeProvider>
+          <Navigation />
           {children}
         </ThemeProvider>
       </body>
