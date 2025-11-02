@@ -1,12 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Check if we're on the home page
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +24,11 @@ export default function Navigation() {
 
   const closeMenu = () => setMobileMenuOpen(false);
 
+  // Navigation links - use full path when not on home page
   const navLinks = [
-    { href: "#projects", label: "Projects" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: isHomePage ? "#projects" : "/#projects", label: "Projects" },
+    { href: isHomePage ? "#about" : "/#about", label: "About" },
+    { href: isHomePage ? "#contact" : "/#contact", label: "Contact" },
   ];
 
   return (
@@ -40,7 +46,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo with gradient */}
           <motion.a
-            href="#"
+            href="/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="relative group"
@@ -84,7 +90,7 @@ export default function Navigation() {
 
             {/* CTA Button */}
             <motion.a
-              href="#contact"
+              href={isHomePage ? "#contact" : "/#contact"}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.3 }}
@@ -151,7 +157,7 @@ export default function Navigation() {
                   </motion.a>
                 ))}
                 <motion.a
-                  href="#contact"
+                  href={isHomePage ? "#contact" : "/#contact"}
                   onClick={closeMenu}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
