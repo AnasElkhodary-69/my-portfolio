@@ -28,6 +28,7 @@ export default function Navigation() {
   const navLinks = [
     { href: isHomePage ? "#projects" : "/#projects", label: "Projects" },
     { href: isHomePage ? "#about" : "/#about", label: "About" },
+    { href: "/resume", label: "Resume" },
     { href: isHomePage ? "#contact" : "/#contact", label: "Contact" },
   ];
 
