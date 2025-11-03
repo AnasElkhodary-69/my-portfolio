@@ -16,35 +16,30 @@ export default function ResumePage() {
     setIsGenerating(true);
 
     try {
-      // Get both wrapper and resume element
-      const wrapperElement = resumeRef.current;
+      // Get the resume element
       const resumeElement = resumeRef.current.querySelector('div') as HTMLElement;
       if (!resumeElement) throw new Error('Resume element not found');
 
-      // Store original styles for both elements
-      const originalWrapperClass = wrapperElement.className;
-      const originalResumeClass = resumeElement.className;
-      const originalMaxWidth = resumeElement.style.maxWidth;
-      const originalWidth = resumeElement.style.width;
-      const originalMargin = resumeElement.style.margin;
+      // Clone the element for off-screen manipulation
+      const clonedElement = resumeElement.cloneNode(true) as HTMLElement;
 
-      // Remove max-width and margin classes from BOTH wrapper and resume element
-      wrapperElement.className = wrapperElement.className.replace(/max-w-\w+/g, '').replace(/mx-auto/g, '');
-      resumeElement.className = resumeElement.className.replace(/max-w-\w+/g, '').replace(/mx-auto/g, '');
+      // Style the clone to be off-screen and full width
+      clonedElement.className = clonedElement.className.replace(/max-w-\w+/g, '').replace(/mx-auto/g, '');
+      clonedElement.style.position = 'fixed';
+      clonedElement.style.left = '-9999px';
+      clonedElement.style.top = '0';
+      clonedElement.style.width = '794px';
+      clonedElement.style.maxWidth = 'none';
+      clonedElement.style.margin = '0';
 
-      // Set explicit width on resume element
-      resumeElement.style.maxWidth = 'none';
-      resumeElement.style.width = '794px'; // A4 width in pixels at 96 DPI
-      resumeElement.style.margin = '0';
-
-      // Debug: Log the actual width
-      console.log('Element width after changes:', resumeElement.offsetWidth);
+      // Append to body temporarily
+      document.body.appendChild(clonedElement);
 
       // Wait for layout to settle
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise(resolve => setTimeout(resolve, 100));
 
-      // Capture the resume element as canvas
-      const canvas = await html2canvas(resumeElement, {
+      // Capture the cloned element as canvas
+      const canvas = await html2canvas(clonedElement, {
         scale: 2,
         useCORS: true,
         logging: false,
@@ -54,12 +49,8 @@ export default function ResumePage() {
 
       console.log('Canvas dimensions:', canvas.width, 'x', canvas.height);
 
-      // Restore original styles immediately
-      wrapperElement.className = originalWrapperClass;
-      resumeElement.className = originalResumeClass;
-      resumeElement.style.maxWidth = originalMaxWidth;
-      resumeElement.style.width = originalWidth;
-      resumeElement.style.margin = originalMargin;
+      // Remove the cloned element
+      document.body.removeChild(clonedElement);
 
       // A4 dimensions in mm
       const pdfWidth = 210;
