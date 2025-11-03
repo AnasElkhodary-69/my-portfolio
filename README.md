@@ -19,6 +19,7 @@ A modern, professional portfolio website showcasing my expertise in Full Stack D
 - **⚡ Performance Optimized**: Built with Next.js 15 for optimal performance and SEO
 - **🎭 Smooth Animations**: Powered by Framer Motion for delightful user experience
 - **📊 Project Showcase**: 5 production-ready projects with detailed information
+- **📄 Interactive Resume**: Professional resume page with PDF download functionality
 - **✉️ Contact Form**: Functional email contact form with Web3Forms integration
 - **🔍 SEO Optimized**: Complete metadata, OpenGraph, and JSON-LD structured data
 - **📈 Analytics**: Google Analytics integration for visitor tracking
@@ -126,6 +127,25 @@ npm run lint         # Run ESLint for code quality checks
 - Skills & technologies categorized
 - Experience highlights
 - Achievement statistics
+
+### Resume (`/resume`)
+- **Professional Layout**: Clean, organized resume with all work experience, projects, and skills
+- **Direct PDF Download**: One-click download generates optimized PDF file
+- **Smart PDF Generation**:
+  - Uses html2canvas and jsPDF for client-side PDF generation
+  - Automatically expands content to full A4 width (210mm) during capture
+  - JPEG compression (95% quality) for optimal file size (~500KB-1MB)
+  - Custom page height to fit all content without cutting or page breaks
+  - Zero margins for full-width professional appearance
+  - Scale 2x for high-quality text rendering
+- **Comprehensive Content**:
+  - Professional summary
+  - Work experience (SalesBreach PRO, Sales Master, SDS Automation)
+  - Featured projects (SavetyAI, Oola)
+  - Technical skills organized by category
+  - Education and key achievements
+- **Responsive Design**: Looks great on all devices
+- **Dark Mode Support**: Seamlessly integrates with portfolio theme
 
 ### Contact
 - Functional email form
