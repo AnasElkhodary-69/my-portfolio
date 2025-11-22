@@ -177,39 +177,48 @@ export const projects: Project[] = [
   },
   {
     id: "oola",
-    title: "Oola",
+    title: "IKRAA + OOLA",
     category: "Mobile App",
-    shortDescription: "Arabic learning mobile app with 6 comprehensive chapters and audio pronunciation",
-    fullDescription: "A Flutter-based educational mobile application for learning Arabic alphabet and Quranic reading rules. Features 6 comprehensive chapters covering Arabic letters, vowel marks (Harakat), and advanced pronunciation rules with audio for every letter and word.",
-    tech: ["Flutter 3.0+", "Firebase", "Provider", "audioplayers", "Dart"],
+    shortDescription: "Unified Arabic learning platform with 2 apps (Quranic + Modern Arabic), full backend, payments, and admin dashboard",
+    fullDescription: "A production-ready unified Arabic learning platform featuring two distinct apps: IKRAA (Quranic Arabic) and OOLA (Modern Standard Arabic). Complete with NestJS backend, PostgreSQL database, Stripe payments, Google OAuth, admin dashboard, and 6-language support. One subscription unlocks both apps.",
+    tech: ["Flutter 3.5+", "NestJS", "PostgreSQL", "TypeORM", "Stripe", "Next.js 15", "Google OAuth", "Firebase Analytics"],
     highlights: [
-      "6 chapters teaching Arabic alphabet & Quran rules",
-      "Custom SVG assets for 28 Arabic letters",
-      "Canva-designed UI with diamond grid patterns",
-      "Audio pronunciation for every letter and word"
+      "2 complete apps with 12 chapters total (6 each)",
+      "Full authentication system (Email + Google OAuth)",
+      "Stripe payment integration ($9.99 unlocks both apps)",
+      "Admin dashboard with user management & refund processing",
+      "6-language support (English, Arabic, Turkish, French, German, Spanish)",
+      "Production deployment with PM2 + Apache + SSL"
     ],
     features: [
-      "Interactive letter learning with audio",
-      "Chapter-based progressive learning",
-      "Custom Arabic fonts (Uthmanic)",
-      "Firebase Analytics integration",
-      "Hexagonal chapter selection grid",
-      "Smooth page transitions (RTL)",
-      "Safe area support for modern devices"
+      "Interactive letter recognition exercises (31 exercises in OOLA Ch1)",
+      "Audio pronunciation for all letters and words",
+      "Email verification system with 4-digit codes",
+      "Password reset flow with secure tokens",
+      "Real-time payment processing with webhooks",
+      "Multi-language email templates",
+      "Guest mode for trial access",
+      "App switching between IKRAA and OOLA",
+      "Progress tracking and backend persistence",
+      "Rate limiting for security (100 req/min global)"
     ],
     challenges: [
-      "Implementing custom Arabic SVG letter assets",
-      "Managing audio playback state",
-      "Creating responsive layouts for various screen sizes"
+      "Building complete backend infrastructure from scratch",
+      "Implementing secure payment system with Stripe webhooks",
+      "Creating multi-tenant architecture supporting two apps",
+      "Designing interactive exercise system with real-time feedback",
+      "Managing 1,248 translations across 6 languages"
     ],
     results: [
-      "6 complete chapters implemented",
-      "28 custom SVG letter assets",
-      "Functional audio system",
-      "Ready for beta testing"
+      "Live at https://ikraa.ai2go.vip",
+      "Both IKRAA & OOLA apps 100% complete",
+      "805 customers synced, 2,075 products tracked",
+      "Admin dashboard processing refunds & user management",
+      "24/7 production uptime with rate limiting",
+      "Ready for App Store submission"
     ],
-    status: "In Development",
-    link: null,
+    status: "Live",
+    link: "https://ikraa.ai2go.vip",
     github: null,
     image: "/images/oola-preview.png",
     gallery: []

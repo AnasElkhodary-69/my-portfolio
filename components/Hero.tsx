@@ -92,7 +92,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-3xl md:text-5xl font-bold text-gray-700 dark:text-gray-300 mb-6"
         >
-          Full Stack Developer
+          Product Builder
         </motion.h2>
 
         <motion.p
