@@ -14,8 +14,9 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 ## ✨ Features
 
 - **🎨 Modern Design**: Clean, professional interface with smooth animations and micro-interactions
-- **📱 Fully Responsive**: Optimized for mobile, tablet, and desktop devices
-- **🌓 Dark Mode**: Toggle between light and dark themes with smooth transitions
+- **📱 Fully Responsive**: Optimized for mobile, tablet, and desktop devices with dedicated navigation patterns
+- **🧭 Smart Navigation**: Centered floating navbar on desktop, bottom navigation bar on mobile (app-like experience)
+- **🌓 Dark Mode**: Toggle between light and dark themes with smooth transitions (accessible on all devices)
 - **⚡ Performance Optimized**: Built with Next.js 15 for optimal performance and SEO
 - **🎭 Smooth Animations**: Powered by Framer Motion for delightful user experience
 - **📊 Project Showcase**: 6 production-ready projects with detailed information
@@ -168,11 +169,15 @@ The portfolio features a fully functional dark/light theme toggle with:
 ## 📱 Responsive Design
 
 Optimized breakpoints for all devices:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+- **Mobile** (< 768px): Bottom navigation bar with icons for Projects, About, Resume, Contact, and Theme toggle
+- **Tablet** (768px - 1024px): Centered floating navbar
+- **Desktop** (> 1024px): Centered floating pill navbar with AE logo, navigation links, theme toggle, and CTA button
 
 All components adapt seamlessly across screen sizes with mobile-first approach.
+
+### Navigation Patterns
+- **Desktop**: Centered floating glassmorphism navbar with AE logo, dividers, and hover effects
+- **Mobile**: Fixed bottom navigation bar (app-like) with active section indicator and hide-on-scroll behavior
 
 ## 🚀 Deployment
 
@@ -210,7 +215,8 @@ Portfolio/
 │   ├── HowIWork.tsx        # Process section
 │   ├── About.tsx           # About section
 │   ├── Contact.tsx         # Contact form
-│   ├── Navigation.tsx      # Navbar with scroll effects
+│   ├── Navigation.tsx      # Desktop floating navbar with AE logo
+│   ├── MobileBottomNav.tsx # Mobile bottom navigation bar
 │   ├── ThemeProvider.tsx   # Dark mode context
 │   └── ThemeToggle.tsx     # Theme toggle button
 ├── public/                  # Static assets
