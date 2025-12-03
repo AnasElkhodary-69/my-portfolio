@@ -1,3 +1,5 @@
+import { projectStats } from "@/data/projects";
+
 export default function About() {
   const skills = [
     { category: "Frontend", items: ["Next.js", "React", "Astro", "Tailwind CSS", "TypeScript", "Flutter"] },
@@ -76,7 +78,7 @@ export default function About() {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div>
-              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">5</div>
+              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">{projectStats.totalProjects}</div>
               <div className="text-gray-600 dark:text-gray-400 mt-2">Projects Completed</div>
             </div>
             <div>
@@ -84,11 +86,11 @@ export default function About() {
               <div className="text-gray-600 dark:text-gray-400 mt-2">Lines of Code</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">10+</div>
+              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">{projectStats.totalTechnologies}+</div>
               <div className="text-gray-600 dark:text-gray-400 mt-2">Technologies</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">2</div>
+              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">{projectStats.liveProjects}</div>
               <div className="text-gray-600 dark:text-gray-400 mt-2">Live Deployments</div>
             </div>
           </div>

@@ -4,89 +4,20 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { projects as projectsData } from "@/data/projects";
 
-const projects = [
-  {
-    id: "savety-ai",
-    title: "SavetyAI Website",
-    category: "Web Design",
-    description: "AI-powered cybersecurity platform website with modern design and performance optimizations",
-    tech: ["Astro", "Preact", "Tailwind CSS", "Framer Motion"],
-    highlights: [
-      "Geometric hero with 3D sphere animation",
-      "Neural AI theme with gradient effects",
-      "Animated testimonials carousel",
-      "Performance-optimized"
-    ],
-    status: "Live",
-    link: "https://savety.ai",
-    image: "/images/savety-ai-preview.png"
-  },
-  {
-    id: "salesbreach-pro",
-    title: "SalesBreach PRO",
-    category: "Web Application",
-    description: "Enterprise email marketing automation platform with real-time tracking",
-    tech: ["Flask", "SQLite", "Brevo API", "Celery"],
-    highlights: [
-      "15+ Flask blueprints architecture",
-      "Real-time webhook integration",
-      "Campaign automation with sequences",
-      "Running 24/7 sending emails"
-    ],
-    status: "Production",
-    link: "https://marketing.savety.online",
-    image: "/images/salesbreach-preview.png"
-  },
-  {
-    id: "sales-master",
-    title: "Sales Master",
-    category: "Web Application",
-    description: "Multi-tenant SaaS platform with advanced client management system",
-    tech: ["Flask", "SQLAlchemy", "Brevo SDK", "Redis"],
-    highlights: [
-      "Multi-tenant architecture",
-      "Per-client email quotas",
-      "Subscription tier management",
-      "Running 24/7 production system"
-    ],
-    status: "Production",
-    link: null,
-    image: "/images/sales-master-preview.png"
-  },
-  {
-    id: "sds-automation",
-    title: "SDS Automation",
-    category: "AI Automation",
-    description: "Production RAG email system with Odoo integration running 24/7",
-    tech: ["Mistral AI", "DSPy", "Odoo XML-RPC", "Python"],
-    highlights: [
-      "24/7 daemon with auto-recovery",
-      "Health monitoring dashboard",
-      "Incremental Odoo sync",
-      "Production-ready 99.9% uptime"
-    ],
-    status: "Production",
-    link: null,
-    image: "/images/sds-automation-preview.png"
-  },
-  {
-    id: "oola",
-    title: "Oola",
-    category: "Mobile App",
-    description: "Arabic learning mobile app with comprehensive lessons and audio",
-    tech: ["Flutter", "Firebase", "Provider", "Dart"],
-    highlights: [
-      "6 complete learning chapters",
-      "Custom SVG Arabic letters",
-      "Audio pronunciation system",
-      "Canva-designed UI"
-    ],
-    status: "In Development",
-    link: null,
-    image: "/images/oola-preview.png"
-  }
-];
+// Transform projects data for the homepage cards
+const projects = projectsData.map(p => ({
+  id: p.id,
+  title: p.title,
+  category: p.category,
+  description: p.shortDescription,
+  tech: p.tech.slice(0, 4), // Show first 4 tech items
+  highlights: p.highlights.slice(0, 4), // Show first 4 highlights
+  status: p.status,
+  link: p.link,
+  image: p.image
+}));
 
 const categories = ["All", "Web Design", "Web Application", "AI Automation", "Mobile App"];
 

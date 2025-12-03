@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { projectStats } from "@/data/projects";
 
 export default function Hero() {
   return (
@@ -141,8 +142,8 @@ export default function Hero() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
         >
           {[
-            { value: "5", label: "Live Projects", icon: "🚀" },
-            { value: "3", label: "SaaS Platforms", icon: "💼" },
+            { value: String(projectStats.liveProjects), label: "Live Projects", icon: "🚀" },
+            { value: String(projectStats.saasProjects), label: "SaaS Platforms", icon: "💼" },
             { value: "24/7", label: "AI Systems", icon: "🤖" },
             { value: "100%", label: "Client Satisfaction", icon: "⭐" },
           ].map((stat, index) => (

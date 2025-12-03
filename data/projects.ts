@@ -16,6 +16,35 @@ export interface Project {
   gallery: string[];
 }
 
+// Dynamic project statistics - automatically calculated from projects array
+export const getProjectStats = (projectsList: Project[]) => {
+  const totalProjects = projectsList.length;
+  const liveProjects = projectsList.filter(p => p.status === "Live" || p.status === "Production").length;
+  const saasProjects = projectsList.filter(p =>
+    p.category === "Web Application" ||
+    p.shortDescription.toLowerCase().includes("saas") ||
+    p.fullDescription.toLowerCase().includes("saas")
+  ).length;
+  const mobileApps = projectsList.filter(p => p.category === "Mobile App").length;
+  const aiProjects = projectsList.filter(p =>
+    p.category === "AI Automation" ||
+    p.tech.some(t => t.toLowerCase().includes("ai") || t.toLowerCase().includes("mistral"))
+  ).length;
+
+  // Get unique technologies across all projects
+  const allTech = new Set(projectsList.flatMap(p => p.tech));
+  const totalTechnologies = allTech.size;
+
+  return {
+    totalProjects,
+    liveProjects,
+    saasProjects,
+    mobileApps,
+    aiProjects,
+    totalTechnologies
+  };
+};
+
 export const projects: Project[] = [
   {
     id: "savety-ai",
@@ -180,15 +209,15 @@ export const projects: Project[] = [
     title: "IKRAA + OOLA",
     category: "Mobile App",
     shortDescription: "Unified Arabic learning platform with 2 apps (Quranic + Modern Arabic), full backend, payments, and admin dashboard",
-    fullDescription: "A production-ready unified Arabic learning platform featuring two distinct apps: IKRAA (Quranic Arabic) and OOLA (Modern Standard Arabic). Complete with NestJS backend, PostgreSQL database, Stripe payments, Google OAuth, admin dashboard, and 6-language support. One subscription unlocks both apps.",
-    tech: ["Flutter 3.5+", "NestJS", "PostgreSQL", "TypeORM", "Stripe", "Next.js 15", "Google OAuth", "Firebase Analytics"],
+    fullDescription: "A production-ready unified Arabic learning platform featuring two distinct apps: IKRAA (Quranic Arabic) and OOLA (Modern Standard Arabic). Complete with NestJS backend, PostgreSQL database, Stripe payments, Google/Apple OAuth, admin dashboard, and 6-language support. Each app runs on its own domain with separate branding.",
+    tech: ["Flutter 3.5+", "NestJS", "PostgreSQL", "TypeORM", "Stripe", "Next.js 15", "Google OAuth", "Apple Sign-In", "PM2", "Apache"],
     highlights: [
-      "2 complete apps with 12 chapters total (6 each)",
-      "Full authentication system (Email + Google OAuth)",
-      "Stripe payment integration ($9.99 unlocks both apps)",
+      "2 complete apps with separate backends and dashboards",
+      "Full authentication system (Email + Google + Apple OAuth)",
+      "Stripe payment integration with webhook processing",
       "Admin dashboard with user management & refund processing",
       "6-language support (English, Arabic, Turkish, French, German, Spanish)",
-      "Production deployment with PM2 + Apache + SSL"
+      "Production deployment with PM2 + Apache + SSL on separate domains"
     ],
     features: [
       "Interactive letter recognition exercises (31 exercises in OOLA Ch1)",
@@ -198,7 +227,7 @@ export const projects: Project[] = [
       "Real-time payment processing with webhooks",
       "Multi-language email templates",
       "Guest mode for trial access",
-      "App switching between IKRAA and OOLA",
+      "Deep linking support (ikraa:// and oola://)",
       "Progress tracking and backend persistence",
       "Rate limiting for security (100 req/min global)"
     ],
@@ -206,21 +235,71 @@ export const projects: Project[] = [
       "Building complete backend infrastructure from scratch",
       "Implementing secure payment system with Stripe webhooks",
       "Creating multi-tenant architecture supporting two apps",
-      "Designing interactive exercise system with real-time feedback",
+      "Cloning and rebranding entire backend/dashboard for OOLA",
       "Managing 1,248 translations across 6 languages"
     ],
     results: [
-      "Live at https://ikraa.ai2go.vip",
-      "Both IKRAA & OOLA apps 100% complete",
-      "805 customers synced, 2,075 products tracked",
+      "IKRAA live at https://ikraa.ai2go.vip",
+      "OOLA live at https://app.oo-la.com",
+      "Both apps 100% complete with separate admin dashboards",
       "Admin dashboard processing refunds & user management",
-      "24/7 production uptime with rate limiting",
+      "24/7 production uptime with PM2 auto-recovery",
       "Ready for App Store submission"
     ],
     status: "Live",
-    link: "https://ikraa.ai2go.vip",
+    link: "https://app.oo-la.com",
     github: null,
     image: "/images/oola-preview.png",
     gallery: []
+  },
+  {
+    id: "ai2go-education",
+    title: "AI2GO Education Analytics",
+    category: "Web Application",
+    shortDescription: "Government-scale education data unification platform with AI-powered analytics for ministries of education",
+    fullDescription: "A comprehensive education data unification platform designed for government ministries of education. Connects 100+ school districts, 5,000+ schools, and 2M+ students into one intelligent analytics system with AI-powered early warning, budget optimization, and predictive interventions.",
+    tech: ["React 19", "Chakra UI", "ApexCharts", "Framer Motion", "Tailwind CSS", "@tsparticles", "@dnd-kit", "Apache"],
+    highlights: [
+      "Scale: 100+ districts, 5,000+ schools, 2M+ students",
+      "AI Widget Generator with natural language input",
+      "Real-time ROI Calculator for budget planning",
+      "GPU-accelerated particle starfield (60fps)",
+      "7 comprehensive dashboard pages",
+      "Dark/Light mode with space theme"
+    ],
+    features: [
+      "Multi-District Analytics Dashboard with KPIs",
+      "AI-Powered Early Warning System for at-risk students",
+      "Regional Breakdown with 4-region comparison",
+      "School Profiles database (109 schools searchable)",
+      "Program ROI Analysis ($12.4M budget tracking)",
+      "Student Journey Tracker with risk scores",
+      "Budget Planner with scenario planning",
+      "School Comparison with grade analysis",
+      "Drag-and-drop AI Widget Generator with 8 templates",
+      "Interactive Before/After comparison slider"
+    ],
+    challenges: [
+      "Handling large-scale education data visualization",
+      "Creating intuitive AI widget generation system",
+      "Implementing GPU-accelerated particle animations",
+      "Building responsive dashboard for government officials"
+    ],
+    results: [
+      "Live at https://edu.ai2go.vip",
+      "Production-ready platform (v7.2.0)",
+      "13 priority alerts with AI recommendations",
+      "76% of schools meeting provincial standards",
+      "<2s load time with 443kB bundle size",
+      "99.9% uptime in production"
+    ],
+    status: "Live",
+    link: "https://edu.ai2go.vip",
+    github: null,
+    image: "/images/ai2go-education-preview.png",
+    gallery: []
   }
 ];
+
+// Pre-computed stats for easy import
+export const projectStats = getProjectStats(projects);

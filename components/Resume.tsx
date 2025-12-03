@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { projectStats } from "@/data/projects";
 
 export default function Resume() {
   return (
@@ -13,7 +14,7 @@ export default function Resume() {
         className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-12 print:p-8"
       >
         <h1 className="text-5xl font-bold mb-2 print:text-4xl">Anas Elkhodary</h1>
-        <h2 className="text-2xl font-light mb-6 print:text-xl">Full Stack Developer & AI Engineer</h2>
+        <h2 className="text-2xl font-light mb-6 print:text-xl">Product Builder & AI Engineer</h2>
         <div className="flex flex-wrap gap-4 text-sm print:text-xs">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -64,10 +65,10 @@ export default function Resume() {
           Professional Summary
         </h3>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Full-stack developer with expertise in building scalable web applications, intelligent automation systems, and cross-platform mobile apps.
-          Specialized in creating production-ready solutions that solve real business problems. Proven track record of delivering 5 major projects,
+          Product Builder with expertise in building scalable web applications, intelligent automation systems, and cross-platform mobile apps.
+          Specialized in creating production-ready solutions that solve real business problems. Proven track record of delivering {projectStats.totalProjects} major projects,
           including 24/7 production systems with 99.9% uptime. Strong foundation in both frontend and backend development, with particular expertise
-          in AI-powered automation and multi-tenant SaaS platforms.
+          in AI-powered automation, multi-tenant SaaS platforms, and government-scale analytics dashboards.
         </p>
       </motion.section>
 
@@ -88,7 +89,7 @@ export default function Resume() {
           <div>
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Full Stack Developer</h4>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Product Builder</h4>
                 <p className="text-blue-600 dark:text-blue-400 font-semibold">SalesBreach PRO - Enterprise Email Marketing Platform</p>
               </div>
               <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Production - 24/7</span>
@@ -106,7 +107,7 @@ export default function Resume() {
           <div>
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Lead Developer</h4>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Product Builder</h4>
                 <p className="text-blue-600 dark:text-blue-400 font-semibold">Sales Master - Multi-Tenant SaaS Platform</p>
               </div>
               <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Production - 24/7</span>
@@ -170,18 +171,37 @@ export default function Resume() {
             </p>
           </div>
 
-          {/* Oola */}
+          {/* IKRAA + OOLA */}
           <div>
             <div className="flex justify-between items-start mb-2">
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white">Oola - Arabic Learning App</h4>
-              <span className="text-sm text-gray-600 dark:text-gray-400">In Development</span>
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">IKRAA + OOLA - Arabic Learning Platform</h4>
+              <a href="https://app.oo-la.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                app.oo-la.com ↗
+              </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
-              Cross-platform mobile app for learning Arabic with comprehensive lessons and audio pronunciation
+              Unified Arabic learning platform with 2 production apps (Quranic + Modern Arabic), full backend, Stripe payments, and admin dashboard
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              <strong>Tech:</strong> Flutter, Firebase, Provider, Dart |
-              <strong> Features:</strong> 6 learning chapters, custom SVG letters, audio system
+              <strong>Tech:</strong> Flutter, NestJS, PostgreSQL, Stripe, Next.js, Google/Apple OAuth |
+              <strong> Features:</strong> 6-language support, payment processing, admin dashboard, PM2 deployment
+            </p>
+          </div>
+
+          {/* AI2GO Education Analytics */}
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">AI2GO Education Analytics</h4>
+              <a href="https://edu.ai2go.vip" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                edu.ai2go.vip ↗
+              </a>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">
+              Government-scale education data unification platform with AI-powered analytics for ministries of education
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Tech:</strong> React 19, Chakra UI, ApexCharts, Framer Motion, @tsparticles |
+              <strong> Features:</strong> 100+ districts, AI Widget Generator, 7 dashboard pages, ROI Calculator
             </p>
           </div>
         </div>
@@ -247,23 +267,23 @@ export default function Resume() {
         <div className="space-y-4">
           <div>
             <h4 className="text-xl font-bold text-gray-900 dark:text-white">Software Engineering</h4>
-            <p className="text-gray-700 dark:text-gray-300">Focus on Full Stack Development, AI/ML, and SaaS Architecture</p>
+            <p className="text-gray-700 dark:text-gray-300">Focus on Product Building, AI/ML, and SaaS Architecture</p>
           </div>
 
           <div className="mt-6">
             <h4 className="font-bold text-gray-900 dark:text-white mb-3">Key Metrics</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">5</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{projectStats.totalProjects}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
               </div>
               <div className="text-center p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">3</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">24/7 Production Systems</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{projectStats.liveProjects}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Live Deployments</div>
               </div>
               <div className="text-center p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">50K+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Lines of Code</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{projectStats.totalTechnologies}+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
               </div>
               <div className="text-center p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
                 <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">99.9%</div>
