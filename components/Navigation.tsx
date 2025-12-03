@@ -2,12 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   // Check if we're on the home page
@@ -22,8 +21,6 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const closeMenu = () => setMobileMenuOpen(false);
-
   // Navigation links - use full path when not on home page
   const navLinks = [
     { href: isHomePage ? "#projects" : "/#projects", label: "Projects" },
@@ -37,142 +34,110 @@ export default function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl shadow-lg"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 hidden md:flex justify-center px-4 py-4"
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo with gradient */}
+      <motion.div
+        className={`flex items-center gap-4 px-6 py-3 rounded-full transition-all duration-300 ${
+          scrolled
+            ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50"
+            : "bg-white/60 dark:bg-gray-900/60 backdrop-blur-lg shadow-lg border border-gray-200/30 dark:border-gray-700/30"
+        }`}
+      >
+        {/* AE Logo */}
+        <motion.a
+          href="/"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="relative group"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 120 120"
+            className="w-10 h-10"
+          >
+            <defs>
+              <linearGradient id="gA" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stopColor="#7C3AED" />
+                <stop offset="1" stopColor="#FF5CA0" />
+              </linearGradient>
+              <linearGradient id="gE" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stopColor="#06B6D4" />
+                <stop offset="1" stopColor="#60A5FA" />
+              </linearGradient>
+              <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+                <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000" floodOpacity="0.12" />
+              </filter>
+            </defs>
+            <text
+              x="42"
+              y="74"
+              fontFamily="Inter,Roboto,Helvetica,Arial,sans-serif"
+              fontWeight="800"
+              fontSize="74"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="url(#gA)"
+              filter="url(#shadow)"
+              style={{ letterSpacing: "-4px" }}
+            >
+              A
+            </text>
+            <g transform="translate(68,72) rotate(-8)">
+              <text
+                x="0"
+                y="0"
+                fontFamily="Inter,Roboto,Helvetica,Arial,sans-serif"
+                fontWeight="800"
+                fontSize="78"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fill="url(#gE)"
+                style={{ mixBlendMode: "multiply", opacity: 0.95, letterSpacing: "-6px" }}
+              >
+                E
+              </text>
+            </g>
+          </svg>
+        </motion.a>
+
+        {/* Divider */}
+        <div className="w-px h-8 bg-gray-300 dark:bg-gray-600" />
+
+        {/* Desktop Navigation Links */}
+        {navLinks.map((link, index) => (
           <motion.a
-            href="/"
+            key={link.href}
+            href={link.href}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative group"
+            className="relative px-5 py-2.5 text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
           >
-            <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              Anas
-            </span>
-            <motion.span
-              className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"
-              initial={{ scaleX: 0 }}
-              whileHover={{ scaleX: 1 }}
-              transition={{ duration: 0.3 }}
-            />
+            {link.label}
           </motion.a>
+        ))}
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.href}
-                href={link.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative px-5 py-2 text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
-              >
-                {link.label}
-                <motion.span
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.a>
-            ))}
+        {/* Divider */}
+        <div className="w-px h-8 bg-gray-300 dark:bg-gray-600" />
 
-            {/* Theme Toggle */}
-            <ThemeToggle />
+        {/* Theme Toggle */}
+        <ThemeToggle />
 
-            {/* CTA Button */}
-            <motion.a
-              href={isHomePage ? "#contact" : "/#contact"}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.3 }}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="ml-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              Hire Me
-            </motion.a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <motion.button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            whileTap={{ scale: 0.9 }}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-lg"
-            aria-label="Toggle menu"
-          >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <motion.span
-                animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
-              />
-              <motion.span
-                animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
-              />
-              <motion.span
-                animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-                className="w-full h-0.5 bg-gray-700 dark:bg-gray-200 rounded-full"
-              />
-            </div>
-          </motion.button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden"
-            >
-              <motion.div
-                initial={{ y: -20 }}
-                animate={{ y: 0 }}
-                exit={{ y: -20 }}
-                className="mt-6 pb-6 flex flex-col gap-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl p-6 shadow-xl"
-              >
-                {navLinks.map((link, index) => (
-                  <motion.a
-                    key={link.href}
-                    href={link.href}
-                    onClick={closeMenu}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="text-gray-700 dark:text-gray-200 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-lg"
-                  >
-                    {link.label}
-                  </motion.a>
-                ))}
-                <motion.a
-                  href={isHomePage ? "#contact" : "/#contact"}
-                  onClick={closeMenu}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.3 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-bold hover:from-blue-700 hover:to-indigo-700 transition-all text-center shadow-lg"
-                >
-                  Hire Me
-                </motion.a>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+        {/* CTA Button */}
+        <motion.a
+          href={isHomePage ? "#contact" : "/#contact"}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+        >
+          Hire Me
+        </motion.a>
+      </motion.div>
     </motion.nav>
   );
 }

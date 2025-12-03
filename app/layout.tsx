@@ -3,6 +3,7 @@ import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 export const metadata: Metadata = {
   title: "Anas Elkhodary - Product Builder & AI Engineer | Portfolio",
@@ -115,6 +116,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <ThemeProvider>
           <Navigation />
+          <MobileBottomNav />
           {children}
         </ThemeProvider>
       </body>
