@@ -138,6 +138,25 @@ export default function Resume() {
               <li><strong>Tech Stack:</strong> Python, Mistral AI, DSPy, Odoo XML-RPC, NLP, Daemon Services</li>
             </ul>
           </div>
+
+          {/* TNG Odoo Migration */}
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <div>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">ERP Migration Engineer</h4>
+                <p className="text-blue-600 dark:text-blue-400 font-semibold">TNG Finishing Contractors - Odoo 19.0 Enterprise Migration</p>
+              </div>
+              <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Production - Jan 2026</span>
+            </div>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 ml-4">
+              <li>Led full Monday.com → Odoo 19.0 Enterprise migration: 329 CRM leads, 514 contacts, $333K+ invoices</li>
+              <li>Built 4 custom Odoo modules (DIDWW SMS, Twilio incoming SMS, estimate options, task states)</li>
+              <li>Integrated DIDWW VoIP (SIP/WebSocket) with call recording and Twilio bidirectional SMS</li>
+              <li>Deployed Flask SMS proxy microservice on VPS to bridge Odoo SaaS with IP-whitelisted DIDWW API</li>
+              <li>Authored 150+ Python scripts for ETL pipeline, automations, verification, and maintenance</li>
+              <li><strong>Tech Stack:</strong> Python, Odoo XML-RPC, Flask, Twilio, DIDWW, Monday.com GraphQL, Gunicorn</li>
+            </ul>
+          </div>
         </div>
       </motion.section>
 

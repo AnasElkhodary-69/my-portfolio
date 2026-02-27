@@ -298,6 +298,54 @@ export const projects: Project[] = [
     github: null,
     image: "/images/ai2go-education-preview.png",
     gallery: []
+  },
+  {
+    id: "tng-odoo-migration",
+    title: "TNG Odoo ERP Migration",
+    category: "ERP Migration",
+    shortDescription: "Full-scale Monday.com → Odoo 19.0 Enterprise migration with VoIP, SMS integrations, custom modules, and 150+ automation scripts",
+    fullDescription: "A comprehensive enterprise migration project for TNG Finishing Contractors (US construction company). Migrated the entire business from Monday.com to Odoo 19.0 Enterprise — including 329 CRM leads, 514 contacts, $333K+ in invoices, 10 projects, and 71 products. Built 4 custom Odoo modules, integrated DIDWW VoIP telephony and Twilio SMS with a Flask proxy microservice, created 10+ business automations, and delivered 150+ Python scripts covering the full ETL pipeline, verification, and ongoing maintenance.",
+    tech: ["Python", "Odoo 19.0", "XML-RPC", "Flask", "Twilio", "DIDWW VoIP", "Monday.com GraphQL", "Gunicorn", "PostgreSQL", "SIP/WebSocket"],
+    highlights: [
+      "329 CRM leads + 514 contacts + $333K invoices migrated",
+      "4 custom Odoo modules built from scratch",
+      "VoIP integration with DIDWW phone.systems (SIP/WSS)",
+      "Bidirectional SMS: Twilio inbound + DIDWW outbound via Flask proxy",
+      "150+ Python automation scripts for ETL & maintenance",
+      "Flask SMS proxy microservice deployed on VPS with Gunicorn"
+    ],
+    features: [
+      "Complete Monday.com → Odoo ETL pipeline with 9 sequential import scripts",
+      "DIDWW VoIP integration with call recording and ring groups",
+      "Twilio SMS webhook → Odoo chatter with automatic contact matching",
+      "Flask SMS proxy overcoming DIDWW IP whitelisting via static VPS",
+      "Multi-option quotation system (estimate variations with auto-numbering)",
+      "Invoice-to-task status sync automation (paid/posted → task state)",
+      "CRM stage automations with per-stage user assignment",
+      "Phone number normalization with multi-pattern fuzzy matching",
+      "Custom task states module for construction workflow",
+      "File attachment migration with Base64 upload to Odoo"
+    ],
+    challenges: [
+      "Bridging Odoo SaaS (no static IP) to DIDWW's IP-whitelisted SMS API via a VPS proxy",
+      "Normalizing phone numbers across 4+ formats for reliable contact matching",
+      "Designing a 9-script ETL pipeline with dependency ordering and duplicate prevention",
+      "Building bidirectional SMS (two providers: Twilio inbound, DIDWW outbound) into one unified chatter experience",
+      "Creating multi-option quotations without a separate Odoo model (self-referential Many2one)"
+    ],
+    results: [
+      "Migration completed Jan 2026 — ongoing enhancements through Feb 2026",
+      "329 CRM leads, 101 vendor bills ($168K), 13 invoices ($165K) imported",
+      "VoIP fully operational with call recording & ring groups",
+      "SMS messages auto-post to contact/lead chatter with author attribution",
+      "10+ automations running 24/7 (stage assignments, archiving, status sync)",
+      "Comprehensive training documentation delivered to client team"
+    ],
+    status: "Production",
+    link: null,
+    github: null,
+    image: "",
+    gallery: []
   }
 ];
 
