@@ -1,6 +1,6 @@
 # Anas Elkhodary - Portfolio Website
 
-A modern, professional portfolio website showcasing my expertise in Product Building, AI Engineering, and SaaS applications.
+A modern, professional portfolio website showcasing my expertise in Product Building, AI Engineering, ERP Migration, and SaaS applications.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)
@@ -19,7 +19,7 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 - **🌓 Dark Mode**: Toggle between light and dark themes with smooth transitions (accessible on all devices)
 - **⚡ Performance Optimized**: Built with Next.js 15 for optimal performance and SEO
 - **🎭 Smooth Animations**: Powered by Framer Motion for delightful user experience
-- **📊 Project Showcase**: 6 production-ready projects with detailed information
+- **📊 Project Showcase**: 7 production-ready projects with detailed information
 - **📈 Dynamic Stats**: Project statistics automatically calculated from data source
 - **📄 Interactive Resume**: Professional resume page with PDF download functionality
 - **✉️ Contact Form**: Functional email contact form with Web3Forms integration
@@ -34,6 +34,7 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 4. **SDS Automation** - Production RAG email system with 99.9% uptime
 5. **IKRAA + OOLA** - Unified Arabic learning platform with 2 apps, full backend, Stripe payments ([app.oo-la.com](https://app.oo-la.com))
 6. **AI2GO Education Analytics** - Government-scale education data unification platform ([edu.ai2go.vip](https://edu.ai2go.vip))
+7. **TNG Odoo ERP Migration** - Full Monday.com → Odoo 19.0 Enterprise migration with VoIP, SMS, 4 custom modules & 150+ automation scripts
 
 ## 🛠 Tech Stack
 
@@ -143,8 +144,8 @@ npm run lint         # Run ESLint for code quality checks
   - Scale 2x for high-quality text rendering
 - **Comprehensive Content**:
   - Professional summary
-  - Work experience (SalesBreach PRO, Sales Master, SDS Automation)
-  - Featured projects (SavetyAI, IKRAA + OOLA, AI2GO Education Analytics)
+  - Work experience (SalesBreach PRO, Sales Master, SDS Automation, TNG Odoo Migration)
+  - Featured projects (SavetyAI, IKRAA + OOLA, AI2GO Education Analytics, TNG Odoo Migration)
   - Technical skills organized by category
   - Education and key achievements
   - Dynamic statistics from project data
