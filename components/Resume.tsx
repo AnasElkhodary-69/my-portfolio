@@ -14,7 +14,7 @@ export default function Resume() {
         className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-12 print:p-8"
       >
         <h1 className="text-5xl font-bold mb-2 print:text-4xl">Anas Elkhodary</h1>
-        <h2 className="text-2xl font-light mb-6 print:text-xl">Product Builder & AI Engineer</h2>
+        <h2 className="text-2xl font-light mb-6 print:text-xl">Senior WordPress Developer</h2>
         <div className="flex flex-wrap gap-4 text-sm print:text-xs">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -65,10 +65,11 @@ export default function Resume() {
           Professional Summary
         </h3>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Product Builder with expertise in building scalable web applications, intelligent automation systems, and cross-platform mobile apps.
-          Specialized in creating production-ready solutions that solve real business problems. Proven track record of delivering {projectStats.totalProjects} major projects,
-          including 24/7 production systems with 99.9% uptime. Strong foundation in both frontend and backend development, with particular expertise
-          in AI-powered automation, multi-tenant SaaS platforms, and government-scale analytics dashboards.
+          Senior WordPress Developer with deep expertise building custom themes, plugins, and WooCommerce stores for production at scale.
+          Specialized in PHP development, the WordPress REST API, Gutenberg block development, and headless WordPress architectures.
+          Proven track record of delivering {projectStats.totalProjects}+ production websites and platforms, including 24/7 systems with 99.9% uptime.
+          Strong full-stack foundation across PHP, JavaScript, and modern frontend frameworks, with particular strength in performance optimization,
+          SEO, third-party API integrations, and custom plugin engineering.
         </p>
       </motion.section>
 
@@ -89,17 +90,17 @@ export default function Resume() {
           <div>
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Product Builder</h4>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Senior WordPress Developer</h4>
                 <p className="text-blue-600 dark:text-blue-400 font-semibold">SalesBreach PRO - Enterprise Email Marketing Platform</p>
               </div>
               <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Production - 24/7</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 ml-4">
-              <li>Architected and deployed enterprise email marketing automation platform using Flask with 15+ blueprints</li>
-              <li>Implemented real-time webhook integration with Brevo API for campaign tracking and analytics</li>
-              <li>Developed automated email sequence system with Celery for background task processing</li>
-              <li>Maintained 24/7 production system serving enterprise clients at marketing.savety.online</li>
-              <li><strong>Tech Stack:</strong> Python/Flask, SQLite, Brevo API, Celery, Gunicorn</li>
+              <li>Built and maintained a custom WordPress marketing platform with bespoke plugins and a modular theme architecture</li>
+              <li>Developed a custom plugin integrating the Brevo API via the WordPress REST API for real-time campaign tracking and analytics</li>
+              <li>Engineered automated email-sequence workflows using WP-Cron and background job processing</li>
+              <li>Maintained a 24/7 production WordPress deployment serving enterprise clients at marketing.savety.online</li>
+              <li><strong>Tech Stack:</strong> WordPress, PHP, MySQL, WP REST API, Brevo API, WP-Cron</li>
             </ul>
           </div>
 
@@ -107,17 +108,17 @@ export default function Resume() {
           <div>
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white">Product Builder</h4>
-                <p className="text-blue-600 dark:text-blue-400 font-semibold">Sales Master - Multi-Tenant SaaS Platform</p>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">WordPress Developer (WooCommerce)</h4>
+                <p className="text-blue-600 dark:text-blue-400 font-semibold">Sales Master - Multi-Tenant Membership Platform</p>
               </div>
               <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Production - 24/7</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 ml-4">
-              <li>Built multi-tenant SaaS platform with advanced client management and subscription tier system</li>
-              <li>Implemented per-client email quotas and resource allocation using SQLAlchemy ORM</li>
-              <li>Integrated Redis for session management and caching to optimize performance</li>
-              <li>Designed scalable architecture supporting multiple concurrent tenants with isolated data</li>
-              <li><strong>Tech Stack:</strong> Python/Flask, SQLAlchemy, PostgreSQL, Redis, Brevo SDK</li>
+              <li>Built a WordPress Multisite membership platform with tiered subscriptions and WooCommerce checkout</li>
+              <li>Implemented per-client usage quotas and role-based access control with custom post types and capabilities</li>
+              <li>Integrated Redis object caching and page caching to optimize performance under concurrent load</li>
+              <li>Designed a scalable Multisite architecture supporting multiple tenants with isolated data</li>
+              <li><strong>Tech Stack:</strong> WordPress Multisite, WooCommerce, PHP, MySQL, Redis Object Cache</li>
             </ul>
           </div>
 
@@ -125,17 +126,17 @@ export default function Resume() {
           <div>
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white">AI Engineer</h4>
-                <p className="text-blue-600 dark:text-blue-400 font-semibold">SDS Automation - Production RAG Email System</p>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">WordPress Plugin Developer</h4>
+                <p className="text-blue-600 dark:text-blue-400 font-semibold">SDS Automation - AI-Powered Email Plugin</p>
               </div>
               <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Production - 99.9% Uptime</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 ml-4">
-              <li>Developed AI-powered email automation system using Mistral AI and DSPy for Retrieval-Augmented Generation</li>
-              <li>Integrated with Odoo ERP via XML-RPC for real-time data synchronization and business logic</li>
-              <li>Built 24/7 daemon service with auto-recovery and health monitoring dashboard</li>
+              <li>Developed a custom WordPress plugin adding AI-powered email automation with a settings admin dashboard</li>
+              <li>Integrated external CRM/ERP data via the WordPress REST API and custom endpoints for real-time sync</li>
+              <li>Built a 24/7 WP-Cron processing pipeline with auto-recovery and a health-monitoring admin screen</li>
               <li>Achieved 99.9% uptime through robust error handling and incremental sync mechanisms</li>
-              <li><strong>Tech Stack:</strong> Python, Mistral AI, DSPy, Odoo XML-RPC, NLP, Daemon Services</li>
+              <li><strong>Tech Stack:</strong> WordPress, PHP, WP REST API, WP-Cron, MySQL, Custom Admin UI</li>
             </ul>
           </div>
 
@@ -143,18 +144,18 @@ export default function Resume() {
           <div>
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white">ERP Migration Engineer</h4>
-                <p className="text-blue-600 dark:text-blue-400 font-semibold">TNG Finishing Contractors - Odoo 19.0 Enterprise Migration</p>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">WordPress Developer & Systems Integrator</h4>
+                <p className="text-blue-600 dark:text-blue-400 font-semibold">TNG Finishing Contractors - Business Systems & Web Integration</p>
               </div>
               <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">Production - Jan 2026</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 ml-4">
-              <li>Led full Monday.com → Odoo 19.0 Enterprise migration: 329 CRM leads, 514 contacts, $333K+ invoices</li>
-              <li>Built 4 custom Odoo modules (DIDWW SMS, Twilio incoming SMS, estimate options, task states)</li>
-              <li>Integrated DIDWW VoIP (SIP/WebSocket) with call recording and Twilio bidirectional SMS</li>
-              <li>Deployed Flask SMS proxy microservice on VPS to bridge Odoo SaaS with IP-whitelisted DIDWW API</li>
-              <li>Authored 150+ Python scripts for ETL pipeline, automations, verification, and maintenance</li>
-              <li><strong>Tech Stack:</strong> Python, Odoo XML-RPC, Flask, Twilio, DIDWW, Monday.com GraphQL, Gunicorn</li>
+              <li>Led a full data migration of 329 CRM leads, 514 contacts, and $333K+ in invoices into a unified business platform</li>
+              <li>Built custom integration modules connecting the company website with VoIP, SMS, and CRM back-end systems</li>
+              <li>Integrated DIDWW VoIP (SIP/WebSocket) with call recording and Twilio bidirectional SMS via custom webhooks</li>
+              <li>Developed and deployed PHP/Gravity Forms lead-capture flows wired into the CRM through REST integrations</li>
+              <li>Authored 150+ scripts for ETL pipelines, automations, verification, and maintenance</li>
+              <li><strong>Tech Stack:</strong> WordPress, PHP, Gravity Forms, REST APIs, Twilio, DIDWW, MySQL</li>
             </ul>
           </div>
         </div>
@@ -240,33 +241,33 @@ export default function Resume() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h4 className="font-bold text-gray-900 dark:text-white mb-2">Frontend Development</h4>
-            <p className="text-gray-700 dark:text-gray-300">Next.js, React, Astro, Tailwind CSS, TypeScript, Framer Motion, Flutter</p>
+            <h4 className="font-bold text-gray-900 dark:text-white mb-2">WordPress Development</h4>
+            <p className="text-gray-700 dark:text-gray-300">Custom Themes, Plugin Development, Gutenberg Blocks, WP REST API, WP-Cron, Hooks & Filters, Custom Post Types, ACF, Multisite</p>
           </div>
 
           <div>
-            <h4 className="font-bold text-gray-900 dark:text-white mb-2">Backend Development</h4>
-            <p className="text-gray-700 dark:text-gray-300">Python/Flask, Node.js, SQLAlchemy, REST APIs, Webhooks, Gunicorn</p>
+            <h4 className="font-bold text-gray-900 dark:text-white mb-2">WooCommerce & eCommerce</h4>
+            <p className="text-gray-700 dark:text-gray-300">WooCommerce, Custom Checkout, Payment Gateways, Membership/Subscriptions, Product Customization</p>
           </div>
 
           <div>
-            <h4 className="font-bold text-gray-900 dark:text-white mb-2">AI & Machine Learning</h4>
-            <p className="text-gray-700 dark:text-gray-300">Mistral AI, DSPy, RAG Systems, NLP, OCR (pytesseract)</p>
+            <h4 className="font-bold text-gray-900 dark:text-white mb-2">Languages & Frontend</h4>
+            <p className="text-gray-700 dark:text-gray-300">PHP, JavaScript, TypeScript, HTML5, CSS3/SCSS, Tailwind CSS, React, Next.js (Headless WP)</p>
           </div>
 
           <div>
-            <h4 className="font-bold text-gray-900 dark:text-white mb-2">Database & Storage</h4>
-            <p className="text-gray-700 dark:text-gray-300">SQLite, PostgreSQL, Redis, Odoo ERP</p>
+            <h4 className="font-bold text-gray-900 dark:text-white mb-2">Database & Performance</h4>
+            <p className="text-gray-700 dark:text-gray-300">MySQL/MariaDB, Redis Object Cache, Query Optimization, Caching, Core Web Vitals, SEO</p>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-2">DevOps & Tools</h4>
-            <p className="text-gray-700 dark:text-gray-300">Docker, Git, CI/CD, Daemon Services, VS Code, Android Studio, Postman</p>
+            <p className="text-gray-700 dark:text-gray-300">Git, WP-CLI, Composer, CI/CD, cPanel/SSH, Docker, VS Code, Postman</p>
           </div>
 
           <div>
-            <h4 className="font-bold text-gray-900 dark:text-white mb-2">Cloud & Services</h4>
-            <p className="text-gray-700 dark:text-gray-300">Vercel, Firebase, Brevo API, Web3Forms</p>
+            <h4 className="font-bold text-gray-900 dark:text-white mb-2">Integrations & APIs</h4>
+            <p className="text-gray-700 dark:text-gray-300">REST APIs, Webhooks, Gravity Forms, Brevo, Twilio, Stripe, Third-Party SaaS Integrations</p>
           </div>
         </div>
       </motion.section>
@@ -286,7 +287,7 @@ export default function Resume() {
         <div className="space-y-4">
           <div>
             <h4 className="text-xl font-bold text-gray-900 dark:text-white">Software Engineering</h4>
-            <p className="text-gray-700 dark:text-gray-300">Focus on Product Building, AI/ML, and SaaS Architecture</p>
+            <p className="text-gray-700 dark:text-gray-300">Focus on WordPress Development, PHP Engineering, and Web Architecture</p>
           </div>
 
           <div className="mt-6">
