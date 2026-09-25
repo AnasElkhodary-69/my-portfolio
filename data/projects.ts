@@ -133,45 +133,42 @@ export const projects: Project[] = [
     gallery: []
   },
   {
-    id: "hotheal",
-    title: "HotHeal",
-    category: "Mobile App",
-    shortDescription: "Trilingual healthcare directory for a Cleveland nonprofit: mobile app, WordPress site, health mini-game, and public impact analytics",
-    fullDescription: "A healthcare access platform for Haus of Transcendent (HOT), a Cleveland, Ohio nonprofit, helping people find STI testing, PrEP, vaccines, mental health and other services. It combines an Expo React Native app, a custom WordPress website with map-based search, a Phaser health mini-game, and self-hosted, cookieless analytics with a public impact page for funders — all in English, Spanish and Arabic.",
-    tech: ["Expo SDK 54", "React Native", "TypeScript", "NativeWind", "Zustand", "i18next", "Phaser", "Vite", "WordPress", "PHP", "Leaflet", "Fuse.js", "GoatCounter", "Nginx", "Hetzner"],
+    id: "nonprofit-website-recovery",
+    title: "Nonprofit Website Rebuild & Hack Recovery",
+    category: "Web Design",
+    shortDescription: "Forensic cleanup and full rebuild of a hacked WordPress site for a US nonprofit, with a learning portal and donations",
+    fullDescription: "A US nonprofit's WordPress site had been compromised with hundreds of injected spam posts, a rogue admin account, a backdoor and a pirated page-builder plugin. I investigated the breach over SSH, rebuilt the site clean on staging with only the content migrated, and delivered a 26-page custom theme with a student learning portal, events with ticketing, forms and donations — then recovered its search presence.",
+    tech: ["WordPress", "PHP 8.4", "WP-CLI", "Elementor", "ACF", "Tutor LMS", "The Events Calendar", "Fluent Forms", "Wordfence", "LiteSpeed Cache", "Rank Math", "Cloudflare", "GA4"],
     highlights: [
-      "85 providers in the app, 77 on the website with full translations",
-      "English, Spanish and Arabic with right-to-left layout",
-      "Health Run game with 30 collectible cards and CDC/WHO/NIH health facts",
-      "Cookieless, self-hosted analytics with a public funders' impact page",
-      "Map search with a 15-mile ZIP-code radius filter",
-      "95 logged work sessions over 10 months"
+      "Breach investigated and documented; backdoor and rogue admin removed",
+      "486 injected spam posts removed and returned as 410 Gone",
+      "26-page custom theme (~17k lines of PHP, CSS and JS)",
+      "Accessible (WCAG AA contrast) 15-colour design system",
+      "No Google manual action after recovery"
     ],
     features: [
-      "Provider directory from the WordPress REST API with offline fallback",
-      "Map, tap-to-call and directions for every provider",
-      "Typo-tolerant search with Fuse.js",
-      "Endless-runner mini-game with daily challenges and streaks, in-app and on the web",
-      "Public Programs page linking Ohio assistance programs (SNAP, Medicare, voting)",
-      "Admin analytics dashboard refreshed every 10 minutes",
-      "Login hardening, SMTP and full backups across the client's 4 sites"
+      "Student learning portal with logins (Tutor LMS)",
+      "Event calendar with ticketing",
+      "7 forms and integrated online donations",
+      "Security hardening via a must-use plugin, Wordfence and automated backups",
+      "Redirect map from old URLs, sitemap, GA4 and Search Console",
+      "Task-based admin guide written for the client team"
     ],
     challenges: [
-      "Keeping app and website data in sync from one WordPress source",
-      "Supporting right-to-left Arabic across mobile, web and a game",
-      "Measuring impact for funders without cookies or third-party trackers",
-      "Making health education engaging for a hard-to-reach audience"
+      "Rebuilding clean without carrying any malware from the old install",
+      "Recovering SEO after hundreds of spam URLs had been indexed",
+      "Handing a non-technical team a site they can run themselves"
     ],
     results: [
-      "Live at https://hotheal.org",
-      "Health Run game live at hotheal.org/game",
-      "Public impact dashboard at hotheal.org/impact",
-      "Android builds shipped via EAS"
+      "Clean site launched in about 6 weeks",
+      "127 of 134 distinct broken-URL errors resolved as 410",
+      "Learning portal launched with its first courses",
+      "Ongoing maintenance plan offered after launch"
     ],
     status: "Live",
-    link: "https://hotheal.org",
+    link: null,
     github: null,
-    image: "/images/hotheal-preview.png",
+    image: "",
     gallery: []
   },
   {
@@ -251,45 +248,6 @@ export const projects: Project[] = [
     link: "https://negoki.vercel.app",
     github: null,
     image: "/images/negoki-preview.png",
-    gallery: []
-  },
-  {
-    id: "nonprofit-website-recovery",
-    title: "Nonprofit Website Rebuild & Hack Recovery",
-    category: "Web Design",
-    shortDescription: "Forensic cleanup and full rebuild of a hacked WordPress site for a US nonprofit, with a learning portal and donations",
-    fullDescription: "A US nonprofit's WordPress site had been compromised with hundreds of injected spam posts, a rogue admin account, a backdoor and a pirated page-builder plugin. I investigated the breach over SSH, rebuilt the site clean on staging with only the content migrated, and delivered a 26-page custom theme with a student learning portal, events with ticketing, forms and donations — then recovered its search presence.",
-    tech: ["WordPress", "PHP 8.4", "WP-CLI", "Elementor", "ACF", "Tutor LMS", "The Events Calendar", "Fluent Forms", "Wordfence", "LiteSpeed Cache", "Rank Math", "Cloudflare", "GA4"],
-    highlights: [
-      "Breach investigated and documented; backdoor and rogue admin removed",
-      "486 injected spam posts removed and returned as 410 Gone",
-      "26-page custom theme (~17k lines of PHP, CSS and JS)",
-      "Accessible (WCAG AA contrast) 15-colour design system",
-      "No Google manual action after recovery"
-    ],
-    features: [
-      "Student learning portal with logins (Tutor LMS)",
-      "Event calendar with ticketing",
-      "7 forms and integrated online donations",
-      "Security hardening via a must-use plugin, Wordfence and automated backups",
-      "Redirect map from old URLs, sitemap, GA4 and Search Console",
-      "Task-based admin guide written for the client team"
-    ],
-    challenges: [
-      "Rebuilding clean without carrying any malware from the old install",
-      "Recovering SEO after hundreds of spam URLs had been indexed",
-      "Handing a non-technical team a site they can run themselves"
-    ],
-    results: [
-      "Clean site launched in about 6 weeks",
-      "127 of 134 distinct broken-URL errors resolved as 410",
-      "Learning portal launched with its first courses",
-      "Ongoing maintenance plan offered after launch"
-    ],
-    status: "Live",
-    link: null,
-    github: null,
-    image: "",
     gallery: []
   },
   {
