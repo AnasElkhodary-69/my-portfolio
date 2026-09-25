@@ -175,6 +175,71 @@ export default function Resume() {
         </h3>
 
         <div className="space-y-6">
+          {/* Mecano AI */}
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">Mecano AI - Auto-Repair Shop OS</h4>
+              <a href="https://mecano.best" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                mecano.best ↗
+              </a>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">
+              AI operating system for auto-repair shops: multi-tenant Shop-OS SaaS with a Claude-powered assistant, 3 Flutter apps, and a directory of 8,000+ shops
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Tech:</strong> Next.js, Prisma, PostgreSQL/PostGIS, Claude AI, LangGraph, Stripe, Flutter, Astro, Docker |
+              <strong> Features:</strong> Row-level tenant isolation, text approvals, invoice collection, GPS driver app
+            </p>
+          </div>
+
+          {/* Muslimoon */}
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">Muslimoon - Platform for Mosques</h4>
+              <a href="https://muslimoon.online" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                muslimoon.online ↗
+              </a>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">
+              Multi-tenant SaaS for mosques and Islamic communities with mobile app, admin dashboard, donations, and Android TV displays
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Tech:</strong> NestJS, PostgreSQL, Redis, React, Flutter, Kotlin (Android TV), Astro, Stripe Connect |
+              <strong> Features:</strong> Prayer times, RBAC + 2FA, remote-managed TV screens, CI/CD
+            </p>
+          </div>
+
+          {/* Nonprofit Website Rebuild */}
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">Nonprofit Website Rebuild & Hack Recovery</h4>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">
+              Forensic cleanup and full rebuild of a hacked WordPress site for a US nonprofit: 486 spam posts removed, 26-page custom theme, SEO recovered
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Tech:</strong> WordPress, PHP 8.4, WP-CLI, Tutor LMS, Wordfence, Cloudflare |
+              <strong> Features:</strong> Learning portal, event ticketing, donations, security hardening
+            </p>
+          </div>
+
+          {/* EncarExport */}
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">EncarExport - Korean Car Export Marketplace</h4>
+              <a href="https://encarexport.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                encarexport.com ↗
+              </a>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300 mb-2">
+              Marketplace that scrapes Korean used-car listings and republishes them for export, translated by AI into 4 languages
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Tech:</strong> Next.js 15, Drizzle, PostgreSQL, Python scraper, Claude AI, Expo |
+              <strong> Features:</strong> 5-language site with RTL Arabic, currency switching, mobile app
+            </p>
+          </div>
+
           {/* SavetyAI */}
           <div>
             <div className="flex justify-between items-start mb-2">
