@@ -5,7 +5,7 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 ![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=flat-square&logo=tailwind-css)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.x-ff69b4?style=flat-square)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.x-ff69b4?style=flat-square)
 
 ## 🚀 Live Demo
 
@@ -45,10 +45,10 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 ## 🛠 Tech Stack
 
 ### Frontend
-- **Framework**: Next.js 15.5.6 with App Router
+- **Framework**: Next.js 15.5 with App Router
 - **Language**: TypeScript 5.7
 - **Styling**: Tailwind CSS 3.4.1
-- **Animations**: Framer Motion 11.x
+- **Animations**: Framer Motion 12.x
 - **UI Components**: Custom components with glassmorphism effects
 
 ### Features & Integrations
@@ -89,7 +89,7 @@ Create a `.env.local` file in the root directory:
 WEB3FORMS_KEY=your_web3forms_access_key_here
 
 # Google Analytics (Optional)
-NEXT_PUBLIC_GA_ID=your_google_analytics_id
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 ### Getting API Keys
@@ -120,7 +120,7 @@ npm run lint         # Run ESLint for code quality checks
 - Smooth scroll indicator
 
 ### Featured Projects
-- Filterable project grid by category
+- Filterable project grid by category (Web Design, Web Application, AI Automation, Mobile App, ERP Migration, CRM Automation)
 - Project cards with hover effects
 - Live status badges
 - Tech stack tags
@@ -151,7 +151,7 @@ npm run lint         # Run ESLint for code quality checks
 - **Comprehensive Content**:
   - Professional summary
   - Work experience (SalesBreach PRO, Sales Master, SDS Automation, TNG Odoo Migration)
-  - Featured projects (SavetyAI, IKRAA + OOLA, AI2GO Education Analytics, TNG Odoo Migration)
+  - Featured projects (Mecano AI, Muslimoon, EGE Foundation, EncarExport, SavetyAI, IKRAA + OOLA, AI2GO Education Analytics)
   - Technical skills organized by category
   - Education and key achievements
   - Dynamic statistics from project data
@@ -194,7 +194,7 @@ All components adapt seamlessly across screen sizes with mobile-first approach.
 
 1. Push your code to GitHub
 2. Import your repository to Vercel
-3. Add environment variables (`WEB3FORMS_KEY`, `NEXT_PUBLIC_GA_ID`)
+3. Add environment variables (`WEB3FORMS_KEY`, `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
 4. Deploy automatically!
 
 ### Manual Deployment
@@ -215,7 +215,11 @@ Portfolio/
 │   ├── globals.css          # Global styles
 │   ├── layout.tsx           # Root layout with metadata
 │   ├── page.tsx             # Home page
-│   └── projects/            # Dynamic project pages
+│   ├── projects/[id]/       # Dynamic project detail pages (one per project in data)
+│   ├── resume/              # Resume page with PDF download
+│   ├── api/contact/         # Contact form endpoint (Web3Forms)
+│   ├── sitemap.ts           # Sitemap, auto-generated from data/projects.ts
+│   └── robots.ts            # robots.txt
 ├── components/              # React components
 │   ├── Hero.tsx            # Hero section
 │   ├── Projects.tsx        # Projects showcase
@@ -224,6 +228,9 @@ Portfolio/
 │   ├── Contact.tsx         # Contact form
 │   ├── Navigation.tsx      # Desktop floating navbar with AE logo
 │   ├── MobileBottomNav.tsx # Mobile bottom navigation bar
+│   ├── Resume.tsx          # Resume content (hand-written, not generated from data)
+│   ├── ScrollToTop.tsx     # Scroll-to-top button
+│   ├── GoogleAnalytics.tsx # GA4 script
 │   ├── ThemeProvider.tsx   # Dark mode context
 │   └── ThemeToggle.tsx     # Theme toggle button
 ├── public/                  # Static assets
@@ -245,6 +252,14 @@ The portfolio uses a single source of truth (`data/projects.ts`) for all project
 - Resume key metrics reflect actual project count
 - No manual updating needed across multiple files
 
+### Adding a Project
+1. Add an entry to the `projects` array in `data/projects.ts` (the `id` becomes the `/projects/[id]` URL)
+2. Put its preview image in `public/images/` (or leave `image` as `""` to show no image)
+3. If it uses a new `category`, add that category to the filter list in `components/Projects.tsx`
+4. Optionally add it to `components/Resume.tsx`, which is maintained by hand
+
+The project detail page, sitemap entry and stats update automatically.
+
 ### Performance Optimizations
 - Image optimization with Next.js Image component
 - Lazy loading for components
@@ -257,7 +272,7 @@ The portfolio uses a single source of truth (`data/projects.ts`) for all project
 - Twitter Card integration
 - JSON-LD structured data
 - Canonical URLs
-- Sitemap generation
+- Sitemap generated automatically from project data
 
 ### Accessibility
 - Semantic HTML structure
@@ -276,7 +291,7 @@ The portfolio uses a single source of truth (`data/projects.ts`) for all project
 
 ## 📄 License
 
-© 2025 Anas Elkhodary. All rights reserved.
+© 2026 Anas Elkhodary. All rights reserved.
 
 This project is created for portfolio purposes. Feel free to fork and use as inspiration, but please give credit.
 
