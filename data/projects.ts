@@ -133,11 +133,11 @@ export const projects: Project[] = [
     gallery: []
   },
   {
-    id: "nonprofit-website-recovery",
-    title: "Nonprofit Website Rebuild & Hack Recovery",
+    id: "ege-foundation",
+    title: "EGE Foundation Website",
     category: "Web Design",
-    shortDescription: "Forensic cleanup and full rebuild of a hacked WordPress site for a US nonprofit, with a learning portal and donations",
-    fullDescription: "A US nonprofit's WordPress site had been compromised with hundreds of injected spam posts, a rogue admin account, a backdoor and a pirated page-builder plugin. I investigated the breach over SSH, rebuilt the site clean on staging with only the content migrated, and delivered a 26-page custom theme with a student learning portal, events with ticketing, forms and donations — then recovered its search presence.",
+    shortDescription: "Hack recovery and full custom rebuild of the website for EGE Foundation, a Sacramento environmental-leadership nonprofit",
+    fullDescription: "EGE Foundation (Eternal Generations Emerging) is a Black-led Sacramento nonprofit building a generational pipeline of environmental leadership through outdoor education, paid workforce training and global exchange for BIPOC youth and families. Its WordPress site had been compromised with hundreds of injected spam posts, a rogue admin account, a backdoor and an unofficial page-builder plugin. I investigated the breach over SSH, rebuilt the site clean on staging with only the content migrated, and delivered a 26-page custom theme with a student learning portal, events with ticketing, forms and donations — then recovered its search presence.",
     tech: ["WordPress", "PHP 8.4", "WP-CLI", "Elementor", "ACF", "Tutor LMS", "The Events Calendar", "Fluent Forms", "Wordfence", "LiteSpeed Cache", "Rank Math", "Cloudflare", "GA4"],
     highlights: [
       "Breach investigated and documented; backdoor and rogue admin removed",
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     features: [
       "Student learning portal with logins (Tutor LMS)",
       "Event calendar with ticketing",
-      "7 forms and integrated online donations",
+      "7 forms and integrated Zeffy online donations",
       "Security hardening via a must-use plugin, Wordfence and automated backups",
       "Redirect map from old URLs, sitemap, GA4 and Search Console",
       "Task-based admin guide written for the client team"
@@ -160,15 +160,16 @@ export const projects: Project[] = [
       "Handing a non-technical team a site they can run themselves"
     ],
     results: [
+      "Live at https://egefocused.org",
       "Clean site launched in about 6 weeks",
       "127 of 134 distinct broken-URL errors resolved as 410",
       "Learning portal launched with its first courses",
       "Ongoing maintenance plan offered after launch"
     ],
     status: "Live",
-    link: null,
+    link: "https://egefocused.org",
     github: null,
-    image: "",
+    image: "/images/ege-foundation-preview.png",
     gallery: []
   },
   {

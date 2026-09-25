@@ -30,7 +30,7 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 
 1. **Mecano AI** - AI operating system for auto-repair shops: multi-tenant Shop-OS, Claude assistant, 3 Flutter apps ([mecano.best](https://mecano.best))
 2. **Muslimoon Platform** - Multi-tenant SaaS for mosques: mobile app, admin dashboard, Stripe Connect, Android TV displays ([muslimoon.online](https://muslimoon.online))
-3. **Nonprofit Website Rebuild & Hack Recovery** - Forensic cleanup and 26-page WordPress rebuild for a US nonprofit
+3. **EGE Foundation Website** - Hack recovery and 26-page custom WordPress rebuild for a Sacramento environmental nonprofit ([egefocused.org](https://egefocused.org))
 4. **EncarExport** - AI-translated Korean used-car export marketplace in 5 languages ([encarexport.com](https://encarexport.com))
 5. **NegoKi** - Multi-tenant SaaS for small food businesses with Stripe + Mercado Pago ([negoki.vercel.app](https://negoki.vercel.app))
 6. **CRM & Outreach Automation** - GoHighLevel CRM with 7 pipelines and automated email/WhatsApp follow-ups for a Riyadh B2B firm

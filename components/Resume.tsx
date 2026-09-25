@@ -209,13 +209,16 @@ export default function Resume() {
             </p>
           </div>
 
-          {/* Nonprofit Website Rebuild */}
+          {/* EGE Foundation */}
           <div>
             <div className="flex justify-between items-start mb-2">
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white">Nonprofit Website Rebuild & Hack Recovery</h4>
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">EGE Foundation - Website Rebuild & Hack Recovery</h4>
+              <a href="https://egefocused.org" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+                egefocused.org ↗
+              </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
-              Forensic cleanup and full rebuild of a hacked WordPress site for a US nonprofit: 486 spam posts removed, 26-page custom theme, SEO recovered
+              Forensic cleanup and full rebuild of a hacked WordPress site for a Sacramento environmental-leadership nonprofit: 486 spam posts removed, 26-page custom theme, SEO recovered
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               <strong>Tech:</strong> WordPress, PHP 8.4, WP-CLI, Tutor LMS, Wordfence, Cloudflare |
