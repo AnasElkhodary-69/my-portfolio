@@ -19,7 +19,7 @@ const projects = projectsData.map(p => ({
   image: p.image
 }));
 
-const categories = ["All", "Web Design", "Web Application", "AI Automation", "Mobile App", "ERP Migration"];
+const categories = ["All", "Web Design", "Web Application", "AI Automation", "Mobile App", "ERP Migration", "CRM Automation"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");

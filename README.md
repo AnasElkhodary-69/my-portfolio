@@ -19,7 +19,7 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 - **🌓 Dark Mode**: Toggle between light and dark themes with smooth transitions (accessible on all devices)
 - **⚡ Performance Optimized**: Built with Next.js 15 for optimal performance and SEO
 - **🎭 Smooth Animations**: Powered by Framer Motion for delightful user experience
-- **📊 Project Showcase**: 7 production-ready projects with detailed information
+- **📊 Project Showcase**: 14 production projects with detailed information
 - **📈 Dynamic Stats**: Project statistics automatically calculated from data source
 - **📄 Interactive Resume**: Professional resume page with PDF download functionality
 - **✉️ Contact Form**: Functional email contact form with Web3Forms integration
@@ -28,13 +28,20 @@ A modern, professional portfolio website showcasing my expertise in Product Buil
 
 ## 📋 Projects Featured
 
-1. **SavetyAI Website** - AI-powered cybersecurity platform with modern design ([savety.ai](https://savety.ai))
-2. **SalesBreach PRO** - Enterprise email marketing automation (24/7 Production)
-3. **Sales Master** - Multi-tenant SaaS platform with advanced client management
-4. **SDS Automation** - Production RAG email system with 99.9% uptime
-5. **IKRAA + OOLA** - Unified Arabic learning platform with 2 apps, full backend, Stripe payments ([app.oo-la.com](https://app.oo-la.com))
-6. **AI2GO Education Analytics** - Government-scale education data unification platform ([edu.ai2go.vip](https://edu.ai2go.vip))
-7. **TNG Odoo ERP Migration** - Full Monday.com → Odoo 19.0 Enterprise migration with VoIP, SMS, 4 custom modules & 150+ automation scripts
+1. **Mecano AI** - AI operating system for auto-repair shops: multi-tenant Shop-OS, Claude assistant, 3 Flutter apps ([mecano.best](https://mecano.best))
+2. **Muslimoon Platform** - Multi-tenant SaaS for mosques: mobile app, admin dashboard, Stripe Connect, Android TV displays ([muslimoon.online](https://muslimoon.online))
+3. **HotHeal** - Trilingual healthcare directory for a Cleveland nonprofit: app, website, health game, impact analytics ([hotheal.org](https://hotheal.org))
+4. **EncarExport** - AI-translated Korean used-car export marketplace in 5 languages ([encarexport.com](https://encarexport.com))
+5. **NegoKi** - Multi-tenant SaaS for small food businesses with Stripe + Mercado Pago ([negoki.vercel.app](https://negoki.vercel.app))
+6. **Nonprofit Website Rebuild & Hack Recovery** - Forensic cleanup and 26-page WordPress rebuild for a US nonprofit
+7. **CRM & Outreach Automation** - GoHighLevel CRM with 7 pipelines and automated email/WhatsApp follow-ups for a Riyadh B2B firm
+8. **SavetyAI Website** - AI-powered cybersecurity platform with modern design ([savety.ai](https://savety.ai))
+9. **SalesBreach PRO** - Enterprise email marketing automation (24/7 Production)
+10. **Sales Master** - Multi-tenant SaaS email platform, security-hardened ([marketing.ai2go.vip](https://marketing.ai2go.vip))
+11. **SDS Automation** - Production RAG email system with Mistral + Claude agents and 99.9% uptime
+12. **IKRAA + OOLA** - Arabic learning platform with store purchases on mobile and Stripe/PayPal on web ([app.oo-la.com](https://app.oo-la.com))
+13. **AI2GO Education Analytics** - Government-scale education data unification platform ([edu.ai2go.vip](https://edu.ai2go.vip))
+14. **TNG Odoo ERP Migration** - Full Monday.com → Odoo 19.0 Enterprise migration with Google Voice telephony, 5 custom modules & 300+ automation scripts
 
 ## 🛠 Tech Stack
 
