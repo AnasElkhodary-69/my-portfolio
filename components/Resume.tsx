@@ -5,7 +5,7 @@ import { projectStats } from "@/data/projects";
 
 export default function Resume() {
   return (
-    <div className="max-w-4xl mx-auto bg-white dark:bg-gray-900 shadow-2xl">
+    <div id="resume" className="max-w-4xl mx-auto bg-white dark:bg-gray-900 shadow-2xl print:shadow-none print:max-w-none">
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -24,6 +24,7 @@ export default function Resume() {
             <a href="mailto:anaselkhodary69@gmail.com" className="hover:underline">
               anaselkhodary69@gmail.com
             </a>
+            {"\u00a0"}
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -32,6 +33,7 @@ export default function Resume() {
             <a href="https://github.com/AnasElkhodary-69" target="_blank" rel="noopener noreferrer" className="hover:underline">
               github.com/AnasElkhodary-69
             </a>
+            {"\u00a0"}
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -41,6 +43,7 @@ export default function Resume() {
             <a href="https://www.linkedin.com/in/anas-elkhodary" target="_blank" rel="noopener noreferrer" className="hover:underline">
               linkedin.com/in/anas-elkhodary
             </a>
+            {"\u00a0"}
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -49,6 +52,7 @@ export default function Resume() {
             <a href="https://anaselkhodary.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:underline">
               anaselkhodary.vercel.app
             </a>
+            {"\u00a0"}
           </div>
         </div>
       </motion.div>
@@ -61,7 +65,7 @@ export default function Resume() {
         className="p-12 print:p-8 border-b-2 border-gray-200 dark:border-gray-700"
       >
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-          <span className="text-blue-600 dark:text-blue-400">▸</span>
+          <span aria-hidden="true" className="inline-block w-2.5 h-2.5 rotate-45 bg-blue-600 dark:bg-blue-400" />
           Professional Summary
         </h3>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -80,7 +84,7 @@ export default function Resume() {
         className="p-12 print:p-8 border-b-2 border-gray-200 dark:border-gray-700"
       >
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="text-blue-600 dark:text-blue-400">▸</span>
+          <span aria-hidden="true" className="inline-block w-2.5 h-2.5 rotate-45 bg-blue-600 dark:bg-blue-400" />
           Professional Experience
         </h3>
 
@@ -170,7 +174,7 @@ export default function Resume() {
         className="p-12 print:p-8 border-b-2 border-gray-200 dark:border-gray-700"
       >
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="text-blue-600 dark:text-blue-400">▸</span>
+          <span aria-hidden="true" className="inline-block w-2.5 h-2.5 rotate-45 bg-blue-600 dark:bg-blue-400" />
           Featured Projects
         </h3>
 
@@ -180,7 +184,7 @@ export default function Resume() {
             <div className="flex justify-between items-start mb-2">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">Mecano AI - Auto-Repair Shop OS</h4>
               <a href="https://mecano.best" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                mecano.best ↗
+                {"\u00a0"}mecano.best<span aria-hidden="true" className="print:hidden"> ↗</span>
               </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -197,7 +201,7 @@ export default function Resume() {
             <div className="flex justify-between items-start mb-2">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">Muslimoon - Platform for Mosques</h4>
               <a href="https://muslimoon.online" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                muslimoon.online ↗
+                {"\u00a0"}muslimoon.online<span aria-hidden="true" className="print:hidden"> ↗</span>
               </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -214,7 +218,7 @@ export default function Resume() {
             <div className="flex justify-between items-start mb-2">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">EGE Foundation - Website Rebuild & Hack Recovery</h4>
               <a href="https://egefocused.org" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                egefocused.org ↗
+                {"\u00a0"}egefocused.org<span aria-hidden="true" className="print:hidden"> ↗</span>
               </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -231,7 +235,7 @@ export default function Resume() {
             <div className="flex justify-between items-start mb-2">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">EncarExport - Korean Car Export Marketplace</h4>
               <a href="https://encarexport.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                encarexport.com ↗
+                {"\u00a0"}encarexport.com<span aria-hidden="true" className="print:hidden"> ↗</span>
               </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -248,7 +252,7 @@ export default function Resume() {
             <div className="flex justify-between items-start mb-2">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">SavetyAI Website</h4>
               <a href="https://savety.ai" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                savety.ai ↗
+                {"\u00a0"}savety.ai<span aria-hidden="true" className="print:hidden"> ↗</span>
               </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -265,7 +269,7 @@ export default function Resume() {
             <div className="flex justify-between items-start mb-2">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">IKRAA + OOLA - Arabic Learning Platform</h4>
               <a href="https://app.oo-la.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                app.oo-la.com ↗
+                {"\u00a0"}app.oo-la.com<span aria-hidden="true" className="print:hidden"> ↗</span>
               </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -282,7 +286,7 @@ export default function Resume() {
             <div className="flex justify-between items-start mb-2">
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">AI2GO Education Analytics</h4>
               <a href="https://edu.ai2go.vip" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
-                edu.ai2go.vip ↗
+                {"\u00a0"}edu.ai2go.vip<span aria-hidden="true" className="print:hidden"> ↗</span>
               </a>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -304,7 +308,7 @@ export default function Resume() {
         className="p-12 print:p-8 border-b-2 border-gray-200 dark:border-gray-700"
       >
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="text-blue-600 dark:text-blue-400">▸</span>
+          <span aria-hidden="true" className="inline-block w-2.5 h-2.5 rotate-45 bg-blue-600 dark:bg-blue-400" />
           Technical Skills
         </h3>
 
@@ -349,7 +353,7 @@ export default function Resume() {
         className="p-12 print:p-8"
       >
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-          <span className="text-blue-600 dark:text-blue-400">▸</span>
+          <span aria-hidden="true" className="inline-block w-2.5 h-2.5 rotate-45 bg-blue-600 dark:bg-blue-400" />
           Education & Key Achievements
         </h3>
 

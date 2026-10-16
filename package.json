@@ -6,12 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "resume:pdf": "node scripts/generate-resume-pdf.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
-    "html2canvas": "^1.4.1",
-    "jspdf": "^3.0.3",
     "next": "^15.5.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

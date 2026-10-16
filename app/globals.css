@@ -21,3 +21,31 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Print / PDF export: hide site chrome so only the resume prints */
+@media print {
+  body > nav,
+  nav {
+    display: none !important;
+  }
+}
+
+@media print {
+  /* Full-bleed header on page 1; breathing room on continuation pages */
+  @page {
+    size: A4;
+    margin: 12mm 0;
+  }
+  @page :first {
+    margin-top: 0;
+  }
+
+  /* Keep each job/project entry and heading together across page breaks */
+  #resume h3 {
+    break-after: avoid;
+  }
+  #resume section > div > div,
+  #resume li {
+    break-inside: avoid;
+  }
+}

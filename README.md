@@ -109,6 +109,9 @@ npm start            # Start production server
 
 # Code Quality
 npm run lint         # Run ESLint for code quality checks
+
+# Resume PDF (run while `npm start` is serving the site on port 3000)
+npm run resume:pdf   # Regenerate public/Anas_Elkhodary_Resume.pdf from /resume
 ```
 
 ## 🎨 Key Sections
@@ -140,14 +143,11 @@ npm run lint         # Run ESLint for code quality checks
 
 ### Resume (`/resume`)
 - **Professional Layout**: Clean, organized resume with all work experience, projects, and skills
-- **Direct PDF Download**: One-click download generates optimized PDF file
-- **Smart PDF Generation**:
-  - Uses html2canvas and jsPDF for client-side PDF generation
-  - Automatically expands content to full A4 width (210mm) during capture
-  - JPEG compression (95% quality) for optimal file size (~500KB-1MB)
-  - Custom page height to fit all content without cutting or page breaks
-  - Zero margins for full-width professional appearance
-  - Scale 2x for high-quality text rendering
+- **Text-based PDF Download**: One-click download of `public/Anas_Elkhodary_Resume.pdf`
+- **ATS-friendly**: the PDF contains real, selectable text (not a screenshot), so job platforms and applicant tracking systems can parse it
+- **Generated from the page itself**: `npm run resume:pdf` prints `/resume` with Chrome (Playwright) using the print styles in `app/globals.css`
+  - A4 pages, full-bleed header on page 1, entries never split across pages
+  - Site navigation and on-screen decorations are hidden in print
 - **Comprehensive Content**:
   - Professional summary
   - Work experience (SalesBreach PRO, Sales Master, SDS Automation, TNG Odoo Migration)
@@ -256,7 +256,7 @@ The portfolio uses a single source of truth (`data/projects.ts`) for all project
 1. Add an entry to the `projects` array in `data/projects.ts` (the `id` becomes the `/projects/[id]` URL)
 2. Put its preview image in `public/images/` (or leave `image` as `""` to show no image)
 3. If it uses a new `category`, add that category to the filter list in `components/Projects.tsx`
-4. Optionally add it to `components/Resume.tsx`, which is maintained by hand
+4. Optionally add it to `components/Resume.tsx`, which is maintained by hand — then regenerate the PDF with `npm run resume:pdf` and commit it
 
 The project detail page, sitemap entry and stats update automatically.
 
